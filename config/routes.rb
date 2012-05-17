@@ -1,4 +1,8 @@
 Pizzaburger::Application.routes.draw do
+  resources :orders
+
+  resources :clients
+
   root to: 'home#index'
 
   # The priority is based upon order of creation:
