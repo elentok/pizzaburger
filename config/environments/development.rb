@@ -32,6 +32,8 @@ Pizzaburger::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  config.sass.preferred_syntax = :sass
+
   # Expands the lines which load the assets
   config.assets.debug = true
 end
