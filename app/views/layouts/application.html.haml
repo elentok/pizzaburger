@@ -7,4 +7,35 @@
   = csrf_meta_tags
 
 %body
-  = yield
+  .navbar
+    .navbar-inner
+      .container
+        %a.brand{href: root_path} PizzaBurger
+
+  .container
+    .row
+      .span2
+        .well.nav-container
+          %ul.nav.nav-list
+            %li.nav-header Clients
+            %li
+              %a{href: new_client_path}
+                %i.icon-user
+                New
+            %li
+              %a{href: clients_path}
+                %i.icon-list
+                List all
+            %li.nav-header Orders
+            %li
+              %a{href: new_order_path}
+                %i.icon-plus
+                New
+            %li
+              %a{href: orders_path}
+                %i.icon-list
+                List all
+      .span10
+        - unless notice.nil?
+          #notice.alert= notice
+        = yield

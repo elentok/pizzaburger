@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %b Name:
   = @client.name
@@ -10,6 +8,5 @@
   %b Address:
   = @client.address
 
-= link_to 'Edit', edit_client_path(@client)
-\|
-= link_to 'Back', clients_path
+= link_to 'Edit', edit_client_path(@client), class: 'btn'
+= link_to 'Back', clients_path, class: 'btn'
