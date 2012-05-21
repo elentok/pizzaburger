@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Client do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "requires a name" do
+    subject.save.should == false
+    subject.errors.should have_key(:name)
+  end
 end

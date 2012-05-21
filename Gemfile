@@ -11,10 +11,12 @@ end
 
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'rspec-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'spork'
+  gem 'factory_girl_rails'
+  gem 'debugger'
 end
