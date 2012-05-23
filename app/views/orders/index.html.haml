@@ -14,7 +14,7 @@
       %td= order.details
       %td 
         = link_to 'Show', order, class: 'btn btn-mini'
-        = link_to 'Edit', order, action: 'edit', class: 'btn btn-mini'
+        = link_to 'Edit', edit_polymorphic_path(order), action: 'edit', class: 'btn btn-mini'
         = link_to 'Destroy', order, class: 'btn btn-mini',
           :confirm => 'Are you sure?', :method => :delete
 

@@ -1,4 +1,4 @@
-= simple_form_for @order.becomes(Order) do |f|
+= simple_form_for @order do |f|
   .form-fields
     = f.association :client
     = render "#{@order.type.underscore}_form", f: f
