@@ -28,9 +28,13 @@
                 List all
             %li.nav-header Orders
             %li
-              %a{href: new_order_path}
+              %a{href: new_order_path(type: :pizza)}
                 %i.icon-plus
-                New
+                Pizza
+            %li
+              %a{href: new_order_path(type: :burger)}
+                %i.icon-plus
+                Burger
             %li
               %a{href: orders_path}
                 %i.icon-list

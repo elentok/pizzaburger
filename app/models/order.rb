@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
   belongs_to :client
-  attr_accessible :amount, :toppings
+  validates_presence_of :client
+  attr_accessible :client_id
 end

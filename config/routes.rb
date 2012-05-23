@@ -1,7 +1,12 @@
 Pizzaburger::Application.routes.draw do
-  resources :orders
+  resources :orders, only: [:index]
+  resources :pizza_orders
+  resources :burger_orders
 
   resources :clients
+
+  #match 'burger_orders*path', to: redirect('/orders%{path}')
+  #match 'burger_orders', to: redirect('/orders')
 
   root to: 'home#index'
 

@@ -1,23 +1,30 @@
 %h1 Listing orders
 
-%table
+%table.table.table-striped
   %tr
+    %th Type
     %th Client
-    %th Toppings
-    %th Amount
-    %th
-    %th
+    %th Details
     %th
 
   - @orders.each do |order|
     %tr
+      %td= order.type
       %td= order.client
-      %td= order.toppings
-      %td= order.amount
-      %td= link_to 'Show', order
-      %td= link_to 'Edit', edit_order_path(order)
-      %td= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete
+      %td= order.details
+      %td 
+        = link_to 'Show', order, class: 'btn btn-mini'
+        = link_to 'Edit', order, action: 'edit', class: 'btn btn-mini'
+        = link_to 'Destroy', order, class: 'btn btn-mini',
+          :confirm => 'Are you sure?', :method => :delete
 
 %br
 
-= link_to 'New Order', new_order_path
+= link_to new_pizza_order_path, class: 'btn btn-primary' do
+  %i.icon-plus.icon-white
+  New Pizza Order
+
+= link_to new_burger_order_path, class: 'btn btn-primary' do
+  %i.icon-plus.icon-white
+  New Burger Order
+  
