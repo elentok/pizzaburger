@@ -1,7 +1,8 @@
-= simple_form_for @client, html: { class: 'form-horizontal' } do |f|
+= simple_form_for @client, remote: true, format: :json,
+  html: { class: 'form-horizontal' } do |f|
   = f.input :name
   = f.input :phone
   = f.input :address
 
   .form-actions
-    = f.button :submit, class: 'btn btn-primary'
+    = f.button :submit, class: 'btn btn-primary', disable_with: 'Saving...'
